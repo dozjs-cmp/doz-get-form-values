@@ -6,7 +6,7 @@ Get all value from your form
 npm install doz-get-form-values
 ```
 
-Live <a href="https://dozjs-cmp.github.io/doz-get-form-values/dist/index.html">here</a>
+Live <a href="https://dozjs-cmp.github.io/doz-get-form-values/dist/">here</a>
 
 
 ## Usage
