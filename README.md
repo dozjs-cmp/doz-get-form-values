@@ -1,5 +1,5 @@
 # doz-get-form-values
-Get all value from your form
+Get all values from a form
 
 ## Install
 ```
