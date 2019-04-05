@@ -1,23 +1,41 @@
-# [YOUR-COMPONENT]
-[YOUR-COMPONENT-DESCRIPTION]
+# doz-get-form-values
+Get all value from your form
 
 ## Install
 ```
-npm install [YOUR-COMPONENT]
+npm install doz-get-form-values
 ```
 
-Live <a href="https://[YOUR-GITHUB-SPACE].github.io/[YOUR-REPOSITORY]/dist/index.html">here</a>
+Live <a href="https://dozjs-cmp.github.io/doz-get-form-values/dist/index.html">here</a>
 
-### Example
-```javascript
-
-```
 
 ## Usage
 
 Globally
 ```javascript
 import Doz from 'doz'
+Doz.use(window.DozGetFormValues);
+
+    new Doz({
+        root: '#app',
+        template(h) {
+            return h`
+            <form d-ref="form">
+              First name:<br>
+              <input type="text" name="firstname" value="Mickey">
+              <br>
+              Last name:<br>
+              <input type="text" name="lastname" value="Mouse">
+              <br><br>
+            </form>
+            <button onclick="this.onClick()">Submit</button>
+            `
+        },
+
+        onClick(){
+            console.log(this.getFormValues())
+        }
+    });
 
 ```
 
@@ -37,16 +55,11 @@ import Doz from 'doz'
 | ---- | ------- | ----------- |
 
 
-#### CDN unpkg
-```html
-<script src="https://unpkg.com/[YOUR-NPM-SPACE]/dist/bundle.min.js"></script>
-```
-
 ## Changelog
-You can view the changelog <a target="_blank" href="https://github.com/[YOUR-GITHUB-SPACE]/[YOUR-REPOSITORY]/blob/master/CHANGELOG.md">here</a>
+You can view the changelog <a target="_blank" href="https://github.com/dozjs-cmp/doz-get-form-values/blob/master/CHANGELOG.md">here</a>
 
 ## License
-[YOUR-COMPONENT] is open-sourced software licensed under the <a target="_blank" href="http://opensource.org/licenses/MIT">MIT license</a>
+doz-get-form-values is open-sourced software licensed under the <a target="_blank" href="http://opensource.org/licenses/MIT">MIT license</a>
 
 ## Author
-<a target="_blank" href="[YOUR-WEB-SITE]">[YOUR-NAME]</a>
+Pietro Lembo
