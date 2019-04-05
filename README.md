@@ -14,46 +14,32 @@ Live <a href="https://dozjs-cmp.github.io/doz-get-form-values/dist/">here</a>
 Globally
 ```javascript
 import Doz from 'doz'
-Doz.use(window.DozGetFormValues);
+import dozGetFormValues from 'doz-get-form-values'
 
-    new Doz({
-        root: '#app',
-        template(h) {
-            return h`
-            <form d-ref="form">
-              First name:<br>
-              <input type="text" name="firstname" value="Mickey">
-              <br>
-              Last name:<br>
-              <input type="text" name="lastname" value="Mouse">
-              <br><br>
-            </form>
-            <button onclick="this.onClick()">Submit</button>
-            `
-        },
+Doz.use(dozGetFormValues);
 
-        onClick(){
-            console.log(this.getFormValues())
-        }
-    });
+new Doz({
+    root: '#app',
+    template(h) {
+        return h`
+        <form d-ref="form">
+          First name:<br>
+          <input type="text" name="firstname" value="Mickey">
+          <br>
+          Last name:<br>
+          <input type="text" name="lastname" value="Mouse">
+          <br><br>
+        </form>
+        <button onclick="this.onClick()">Submit</button>
+        `
+    },
 
-```
-
-Locally
-```javascript
-import Doz from 'doz'
+    onClick(){
+        console.log(this.getFormValues())
+    }
+});
 
 ```
-
-## Props
-| Name | Default | Description |
-| ---- | ------- | ----------- |
-
-## Events
-
-| Name | Args | Description |
-| ---- | ------- | ----------- |
-
 
 ## Changelog
 You can view the changelog <a target="_blank" href="https://github.com/dozjs-cmp/doz-get-form-values/blob/master/CHANGELOG.md">here</a>
